@@ -1,0 +1,15 @@
+.top-wrapper {
+  background-size: cover;
+  background-position: center;
+}
+
+.blank {
+  height: 820px;
+  background-image: url(title2.png);
+  background-size: cover;
+  background-color: lightblue;
+}
+
+h2 {
+  text-align: center;
+}
