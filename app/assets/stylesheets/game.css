@@ -1,0 +1,42 @@
+.game_container {
+  height: 820px;
+  width: 1229px;
+  background-image: url(lane.png);
+}
+
+.score_display {
+  position: absolute;
+  top: 87px;
+  left: 575px;
+  padding-right: 3px;
+  background-color: red;
+  font-size: 30px;
+  color: white;
+}
+
+.score_object_flowing_area {
+  position: absolute;
+  top: 156px;
+  height: 216px;
+  width: 31000px;
+  position: relative;
+}
+
+.cursor {
+  position: absolute;
+}
+
+.score_object_line_up{
+  position: absolute;
+}
+
+button {
+  font-size: 30px;
+  margin: 30px;
+}
+
+.button {
+  position: absolute;
+  top: 700px;
+  left: 495px;
+}

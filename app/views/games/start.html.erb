@@ -1,2 +1,22 @@
-<h1>Games#start</h1>
-<p>Find me in app/views/games/start.html.erb</p>
+<head>
+  <%= stylesheet_link_tag "game" %>
+</head>
+<div class="game_container">
+  <div class= "game_screen">
+    <div class="score_display">
+      <%= "score: #{@score}" %>
+    </div>
+    <div class="score_object_flowing_area">
+      <div class="cursor">
+        <%= image_tag "cursor.png" %>
+      </div>
+      <div class="score_object_line_up">
+        <%= render partial: 'score_object', collection: @score_objects %>
+      </div>
+    </div>
+    <div class="button">
+      <button class="dispose" value1="<%= @score_objects %>, value2="<%= @score %>">捨てる</button>
+      <button class="eat" value1="<%= @score_objects %> value2="<%= @score %>">食べる</button>
+    </div>
+  </div>
+</div>

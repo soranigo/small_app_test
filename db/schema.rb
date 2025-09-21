@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_09_19_134015) do
-  create_table "food_categories", charset: "utf8mb4", force: :cascade do |t|
+ActiveRecord::Schema[7.2].define(version: 2025_09_20_133505) do
+  create_table "score_object_categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.integer "score", null: false
     t.string "image", null: false
@@ -19,11 +19,12 @@ ActiveRecord::Schema[7.2].define(version: 2025_09_19_134015) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "rubbish_categories", charset: "utf8mb4", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "score", null: false
-    t.string "image", null: false
+  create_table "score_objects", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "score_object_categories_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["score_object_categories_id"], name: "index_score_objects_on_score_object_categories_id"
   end
+
+  add_foreign_key "score_objects", "score_object_categories", column: "score_object_categories_id"
 end

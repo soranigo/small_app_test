@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get "games/start"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -15,7 +14,8 @@ Rails.application.routes.draw do
 
   root "static_pages#top"
   get "rules" => "static_pages#rules"
-  get "game_start" => "games#game_start"
-  get "game_end" => "games#game_end"
-
+  get "game_start" => "games#start"
+  post "eat" => "games#eat"
+  post "game_end" => "games#end"
+  get "result" => "games#result"
 end
